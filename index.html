@@ -31,16 +31,17 @@ body.dark{--bg:#0f172a;--text:#f8fafc;--card:#1e293b;--shadow:rgba(0,0,0,.4);}
 .hero-animate{animation:heroSlide 1s forwards;}
 @keyframes heroSlide{to{opacity:1;transform:translateY(0);}}
 .hero-logo {
-  width: 180px; /* obecny rozmiar dla telefonów */
+  width: 180px; /* rozmiar dla telefonów */
   margin-bottom: 20px;
 }
 
 /* Większe logo na komputerach */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .hero-logo {
-    width: 250px; /* możesz dostosować */
+    width: 350px; /* dostosuj do potrzeb */
   }
 }
+
 
 .hero a{display:inline-block;margin-top:30px;padding:15px 40px;background:var(--primary);border-radius:40px;text-decoration:none;color:#020617;font-weight:600;transition:.3s;}
 .hero a:hover{transform:scale(1.05);background:var(--primary-hover);}
@@ -292,6 +293,7 @@ document.querySelectorAll('.scroll-link').forEach(link => {
 
 </body>
 </html>
+
 
 
 
