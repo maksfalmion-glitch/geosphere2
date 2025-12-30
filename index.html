@@ -23,15 +23,20 @@ body.dark{--bg:#0f172a;--text:#f8fafc;--card:#1e293b;--shadow:rgba(0,0,0,.4);}
 /* HERO PARALLAX */
 .hero{
   min-height:100vh;
-  background:url("https://images.unsplash.com/photo-1573497019944-7c2b1f5b94e3?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+  background:url("c:\Users\maksf\OneDrive\Pulpit\Новая папка\images\image.webp") center/cover no-repeat; /* <- wstaw link do tła */
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  position:relative; 
+  overflow:hidden;
 }
 .hero::before{content:""; position:absolute; inset:0; background:rgba(0,0,0,.65);}
 .hero-content{position:relative;color:#fff;text-align:center;opacity:0;transform:translateY(50px);}
 .hero-animate{animation:heroSlide 1s forwards;}
 @keyframes heroSlide{to{opacity:1;transform:translateY(0);}}
-.hero a{display:inline-block;margin-top:30px;padding:15px 40px;background:var(--primary);border-radius:40px;text-decoration:none;color:#020617;font-weight:600;transition:.3s;}
-.hero a:hover{transform:scale(1.05);background:var(--primary-hover);}
+
+/* LOGO w hero */
+.hero-logo{max-width:200px;margin-bottom:20px;}
 
 /* SEKCJE */
 section{max-width:1100px;margin:auto;padding:60px 20px;opacity:0;transform:translateY(40px);}
@@ -76,6 +81,9 @@ a{color:var(--primary);text-decoration:none;}
 
 <div class="hero">
   <div class="hero-content">
+    <!-- LOGO -->
+    <img src="URL_DO_LOGO" alt="GeoSphere Logo" class="hero-logo">
+    
     <h1>GeoSphere</h1>
     <p>Nowoczesne usługi geodezyjne i GIS</p>
     <a href="#kontakt" class="scroll-link">Skontaktuj się</a>
@@ -88,9 +96,7 @@ a{color:var(--primary);text-decoration:none;}
     <h2>Geodezja i kartografia</h2>
   </div>
   <div class="services-text">
-    <p>Wieloletnie doświadczenie w branży geodezyjnej przy różnym stopniu skomplikowania robót pozwoliło mi zbudować zaufanie wielu klientów. Na co dzień współpracuję z klientami indywidualnymi, projektantami, architektami, firmami budowlanymi zajmującymi się budownictwem kubaturowym, jak i branżowym. Tym samym pomagam w uzyskaniu niezbędnej dokumentacji geodezyjnej do projektowania, wytyczenia i odbioru obiektów budowlanych.</p>
-    <p>Moją wiedzę i doświadczenie potwierdzają zdobyte uprawnienia geodezyjne, dzięki którym sprawuję osobisty nadzór nad każdym zleceniem na każdym etapie jego zaawansowania.</p>
-    <p>Oferuję usługi w zakresie:</p>
+    <p>Wieloletnie doświadczenie w branży geodezyjnej przy różnym stopniu skomplikowania robót pozwoliło mi zbudować zaufanie wielu klientów...</p>
     <ul>
       <li>Map do celów projektowych</li>
       <li>Inwentaryzacji powykonawczych budynków, sieci, przyłączy oraz pozostałych obiektów budowlanych</li>
@@ -98,8 +104,6 @@ a{color:var(--primary);text-decoration:none;}
       <li>Geodezyjnej obsługi budowy</li>
       <li>Aktualizacji mapy zasadniczej</li>
     </ul>
-    <p>Do każdego zlecenia podchodzę indywidualnie. Każdą pracę wykonuję w możliwie najkrótszym terminie, przy zachowaniu najwyższej jakości wykonania usługi.</p>
-    <p>Obszar działania obejmuje nie tylko Szczecin i okolice, ale podejmujemy również zlecenia na obszarze województwa zachodniopomorskiego i całej Polski.</p>
   </div>
 </section>
 
@@ -109,15 +113,7 @@ a{color:var(--primary);text-decoration:none;}
     <h2>Usługi GIS na terenie całej Polski</h2>
   </div>
   <div class="services-text">
-    <p>Świadczymy kompleksowe usługi GIS na terenie całej Polski, obejmujące analizę, przetwarzanie i wizualizację danych przestrzennych. Projekty realizujemy zdalnie, obsługując klientów z różnych branż.</p>
-    <h3>Określenie potrzeb klienta</h3>
-    <p>Każdy projekt GIS rozpoczynamy od analizy celu i oczekiwań klienta.</p>
-    <h3>Pozyskanie danych przestrzennych</h3>
-    <p>Pozyskujemy i porządkujemy dane geodezyjne, środowiskowe, planistyczne oraz dane dostarczone przez inwestora.</p>
-    <h3>Analiza i przetwarzanie danych GIS</h3>
-    <p>Wykonujemy analizy przestrzenne, integrację danych CAD i GIS.</p>
-    <h3>Wynik końcowy i wizualizacja</h3>
-    <p>Efektem prac są czytelne mapy tematyczne, raporty oraz wizualizacje wspierające proces decyzyjny.</p>
+    <p>Świadczymy kompleksowe usługi GIS obejmujące analizę, przetwarzanie i wizualizację danych przestrzennych...</p>
   </div>
 </section>
 
@@ -136,8 +132,7 @@ a{color:var(--primary);text-decoration:none;}
 <div id="kontakt" class="contact">
   <h2>Kontakt</h2>
   <div class="services-text">
-    <p>Niezwykle cenię sobie kontakt ze Zleceniodawcą na każdym etapie prac. Począwszy od zapytania ofertowego do zakończenia zlecenia oraz dalszej współpracy.</p>
-    <p>Masz pytania dotyczące usług geodezyjnych lub chcesz otrzymać darmową wycenę prac? Zapraszamy do kontaktu. Obsługujemy klientów indywidualnych, architektów, projektantów oraz firmy budowlane na terenie Szczecina, Polic i całego województwa zachodniopomorskiego.</p>
+    <p>Niezwykle cenię sobie kontakt ze Zleceniodawcą...</p>
   </div>
 
   <div class="contact-info services-text">
@@ -169,7 +164,7 @@ a{color:var(--primary);text-decoration:none;}
     <button>Wyślij zapytanie</button>
   </form>
 
-  <!-- MAPA Z MARKEREM BEZ API -->
+  <!-- MAPA -->
   <div class="map">
     <iframe 
       width="100%" 
@@ -213,18 +208,45 @@ const sectionObserver = new IntersectionObserver(entries=>{
 },{threshold:0.2});
 sections.forEach(sec=>sectionObserver.observe(sec));
 
-// FORMULARZ Z CHECKMARK
+// FORMULARZ – FORMSpree + CHECKMARK (DZIAŁA)
 const form = document.querySelector(".contact-form");
 const successMsg = document.querySelector("#success");
-form.addEventListener("submit", e=>{
+
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const dzialka = form.querySelector('[name="dzialka"]').value.trim();
   const email = form.querySelector('[name="email"]').value.trim();
-  if(!dzialka){alert("Numer działki musi być"); return;}
-  if(!/^\S+@\S+\.\S+$/.test(email)){alert("Email niepoprawny"); return;}
-  successMsg.classList.add("show");
-  setTimeout(()=>successMsg.classList.remove("show"),2000);
-  form.reset();
+
+  if (!dzialka) {
+    alert("Numer działki musi być");
+    return;
+  }
+
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    alert("Email niepoprawny");
+    return;
+  }
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+      successMsg.classList.add("show");
+      setTimeout(() => successMsg.classList.remove("show"), 2500);
+      form.reset();
+    } else {
+      alert("Błąd wysyłania formularza. Spróbuj ponownie.");
+    }
+  } catch (error) {
+    alert("Błąd połączenia. Sprawdź internet.");
+  }
 });
 
 // PARALLAX HERO
