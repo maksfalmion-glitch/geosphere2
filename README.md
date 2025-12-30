@@ -1,2 +1,0 @@
-# geosphere2
-my
